@@ -1,0 +1,8 @@
+<h1>Projects Index</h1>
+
+<%= link_to 'New Project', new_project_path %>
+
+<% @projects.each do |project| %>
+  <h3><%= link_to project.title, project_path(project) %></h3>
+  <hr>
+<% end %>
