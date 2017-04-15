@@ -1,4 +1,6 @@
 class Project < ApplicationRecord
+  has_many :tasks, dependent: :destroy
+  
   validates(:title, { presence: true, uniqueness: true })
   validates(:due_date, { presence: true })
 

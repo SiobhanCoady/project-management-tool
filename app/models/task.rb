@@ -1,3 +1,5 @@
 class Task < ApplicationRecord
-  validates(:title, { presence: true, uniqueness: true })
+  belongs_to :project
+
+  validates(:title, { presence: true })
 end
